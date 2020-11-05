@@ -20,40 +20,38 @@ Java เป็นภาษา OOP และ เป็น static type ซึ่�
 
 1. ถ้าทาง Web ผมคงยกให้ javascript เพราะถนัดแค่ภาษาเดียวก็เขียนได้ทั้ง front-end และ back-end แต่ถ้าเป็นอนาคตผมยกให้ Kotlin เพราะเป็นภาษาที่พัฒนามาจาก Java แต่เขียนง่ายขึ้นและยังคงข้อดีของ Java ไว้
 
-1. \
-
-```python
-def extract(text):
-    target_first = 'Hello'
-    target_last = 'world'
-    len_tf = len(target_first)
-    len_tl = len(target_last)
-    index_first = 0
-    index_last = 0
-    if len(text) > len_tf + len_tl + 2:
-        for i in range(len(text)-len_tf+1):
-            if text[i] == target_first[0] and text[i+1] == target_first[1] and text[i+2] == target_first[2] and text[i+3] == target_first[3] and text[i+4] == target_first[4] and text[i+5] == ' ':
-                index_first = i+6
-            elif text[i] == ' ' and text[i+1] == target_last[0] and text[i+2] == target_last[1] and text[i+3] == target_last[2] and text[i+4] == target_last[3] and text[i+5] == target_last[4]:
-                if index_first != 0:
-                    index_last = i-1
-            if index_first != 0 and index_last != 0:
-                return text[index_first:index_last+1]
-    return 'cannot extract'
-```
-
-1. \
-
-```python
-def primeAt(n):
-    num = 2
-    list_prime = []
-    while len(list_prime) != n:
-        for i in range(2,(num//2)+1):
-            if (num % i) == 0:  
-                break
-        else:
-            list_prime.append(num)
-        num += 1
-    return list_prime[n-1]
-```
+1.  
+        ```python
+        def extract(text):
+            target_first = 'Hello'
+            target_last = 'world'
+            len_tf = len(target_first)
+            len_tl = len(target_last)
+            index_first = 0
+            index_last = 0
+            if len(text) > len_tf + len_tl + 2:
+                for i in range(len(text)-len_tf+1):
+                    if text[i] == target_first[0] and text[i+1] == target_first[1] and text[i+2] == target_first[2] and text[i+3] == target_first[3] and text[i+4] == target_first[4] and text[i+5] == ' ':
+                        index_first = i+6
+                    elif text[i] == ' ' and text[i+1] == target_last[0] and text[i+2] == target_last[1] and text[i+3] == target_last[2] and text[i+4] == target_last[3] and text[i+5] == target_last[4]:
+                        if index_first != 0:
+                            index_last = i-1
+                    if index_first != 0 and index_last != 0:
+                        return text[index_first:index_last+1]
+            return 'cannot extract'
+        ```
+  
+1.  
+        ```python
+        def primeAt(n):
+            num = 2
+            list_prime = []
+            while len(list_prime) != n:
+                for i in range(2,(num//2)+1):
+                    if (num % i) == 0:  
+                        break
+                else:
+                    list_prime.append(num)
+                num += 1
+            return list_prime[n-1]
+        ```
